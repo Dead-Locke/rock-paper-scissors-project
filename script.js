@@ -8,12 +8,13 @@ function randomIntInterval(min, max){ // returns random integer in a range
 }
 
 function playRound(p, c) { //given two inputs, decides the winner 
-    let win = false; // lose by default
+    let win = false; 
+
     if(p.toLowerCase() == 'rock') if(c== 'Scissors') win = true; // win conditions
     if(p.toLowerCase() == 'paper')  if(c== 'Rock') win = true;
     if(p.toLowerCase() == 'scissors') if(c== 'Paper') win = true;
 
-    return p.toLowerCase() == c.toLowerCase() ? "Its a Tie!": // print out tie, win or lose depending on win variable.
+    return p.toLowerCase() == c.toLowerCase() ? "Its a Tie!": // print out tie, win or lose depending on 'win' variable.
         win ? `You Win! ${p} beats ${c}` : `You Lose! ${c} beats ${p}`;
 
 }
@@ -21,7 +22,7 @@ function playRound(p, c) { //given two inputs, decides the winner
 function game(goal){ // plays the game, first to goal, asks the player for input and plays against a computer, printing results of each round.
     var playerScore = 0; var computerScore = 0;
     var i = 1
-    while(playerScore < 5 && computerScore < 5){ // loop until player or computer get 5 points.
+    while(playerScore < goal && computerScore < goal){ // loop until player or computer get 5 points.
         let p = prompt("Please enter Rock, Paper, or Scissors"); //store moves as variables to print out
         let c = computerMove(); 
         let result = playRound(p, c)[4] //store 5th letter W, L or a to determine winner or tie.
@@ -30,8 +31,7 @@ function game(goal){ // plays the game, first to goal, asks the player for input
         if(result == 'L') computerScore++;
         i++; // increment round
 
-        console.log(`Round ${i}: Player: ${p} --- Computer: ${c}   Score: ${playerScore}-${computerScore}`); //print last moves and total score
-        
+        console.log(`Round ${i}: Player: ${p} --- Computer: ${c}   Score: ${playerScore}-${computerScore}`); //print last moves and total score 
     }
 
     return playerScore > computerScore ? `${playerScore}-${computerScore} You Win!` : 
