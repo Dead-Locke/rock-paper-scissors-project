@@ -3,15 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="wclassth=<device-wclassth>, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&family=VT323&display=swap" rel="stylesheet">
+
     <title>Rock Paper Scissors Game</title>
 </head>
 <body>
-    Hello
-    <script src="script.js">
-        
-    </script>
     
+    <main>
+        <script src="/rock-paper-scissors-project/script.js"></script>
+        <header id="header">
+            <h1>
+                <span class="orange title">FIRE</span>
+                <span class="blue title">WATER</span>
+                <span class="green title">GRASS</span>
+            </h1>
+            <div class="icons">
+                <img class= 'icon' src = '/rock-paper-scissors-project/images/fire.png' alt="fire icon">
+                <img class= 'icon' src = '/rock-paper-scissors-project/images/water.png' alt="water icon">
+                <img class= 'icon' src = '/rock-paper-scissors-project/images/grass.png' alt="grass icon">
+            </div>
+            <p>
+                <span class="orange">FIRE</span> beats <span class="green">GRASS</span>
+                ***
+                <span class="blue">WATER</span> beats <span class="orange">FIRE</span>
+                ***
+                <span class="green">GRASS</span> beats <span class="blue">WATER</span>
+            </p>
+            
+        </header> 
+        
+        <div class="main-area">
+            <div class="weapons-area">
+                    <button class="fire weapon">
+                        <img class= 'icon w-icon' src = '/rock-paper-scissors-project/images/fire.png' alt="fire icon">
+                    </button>
+                    <button class="water weapon">
+                        <img class= 'icon w-icon' src = '/rock-paper-scissors-project/images/water.png' alt="water icon">
+                    </button>
+            
+                    <button class="grass weapon">
+                        <img class= 'icon w-icon' src = '/rock-paper-scissors-project/images/grass.png' alt="grass icon">
+                    </button>
+            
+            </div>
+            
+            <div class="gameinfo">
+                <div class="computer">
+                    <p>Your Challenger</p>
+                    <img class= 'icon' src = '/rock-paper-scissors-project/images/skull.png' alt="skull icon">
+                </div>
+                
+                <div class="roundinfo">
+                    <p class="message">What shall you choose?</p>
+                    <p class="round">Round: 0 </p>
+                    <div class="you">
+                        <p>Your Health: </p>
+                        <div>
+                            <img id="pHeart1" class= 'lifeicon' src = '/rock-paper-scissors-project/images/red_heart.png' alt="life icon">
+                            <img id="pHeart2" class= 'lifeicon' src = '/rock-paper-scissors-project/images/red_heart.png' alt="life icon">
+                            <img  id="pHeart3" class= 'lifeicon' src = '/rock-paper-scissors-project/images/red_heart.png' alt="life icon">
+                            <img id="pHeart4" class= 'lifeicon' src = '/rock-paper-scissors-project/images/red_heart.png' alt="life icon">
+                            <img id="pHeart5" class= 'lifeicon' src = '/rock-paper-scissors-project/images/red_heart.png' alt="life icon">
+                            <img id="pHeart6" class= 'lifeicon' src = '/rock-paper-scissors-project/images/red_heart.png' alt="life icon">
+                        </div>
+                    </div>
+                    <div class="champion">
+                        <p>Champion: </p>
+                        <div>
+                            <img id="cHeart1" class= 'lifeicon' src = '/rock-paper-scissors-project/images/blue_heart.png' alt="life icon">
+                            <img id="cHeart2" class= 'lifeicon' src = '/rock-paper-scissors-project/images/blue_heart.png' alt="life icon">
+                            <img id="cHeart3" class= 'lifeicon' src = '/rock-paper-scissors-project/images/blue_heart.png' alt="life icon">
+                            <img id="cHeart4" class= 'lifeicon' src = '/rock-paper-scissors-project/images/blue_heart.png' alt="life icon">
+                            <img id="cHeart5" class= 'lifeicon' src = '/rock-paper-scissors-project/images/blue_heart.png' alt="life icon">
+                            <img id="cHeart6" class= 'lifeicon' src = '/rock-paper-scissors-project/images/blue_heart.png' alt="life icon">
+                        </div>
+                    </div>
+            
+            
+                </div>
+                <!-- <img class="gif" src = '/rock-paper-scissors-project/images/pokemon.gif' alt="fire icon"> -->
+            </div>
+        </div>   
+    </main>
+    <footer><p>Thanks for playing! Made by Paul.</p></footer>
 </body>
+
 </html>

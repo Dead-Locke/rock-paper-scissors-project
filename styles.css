@@ -1,0 +1,160 @@
+*{margin-left:0;} 
+
+main{
+    font-family: 'VT323';
+    max-width: 720px;
+    margin: auto;
+
+}
+
+.blue {
+    color: #53bccc;
+      
+}
+
+.green{
+    color: rgba(67, 179, 32, 0.897);
+   
+}   
+
+.orange {
+    color: rgb(248, 167, 16); 
+    
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+h1{
+    font-size: 60px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h1 .title {
+    -webkit-text-stroke: 1px black; 
+    margin-bottom: -30px; 
+}
+
+.icons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icon{
+    width: 100px;
+    height: 100px;  
+}
+
+header p{
+    font-size: 25px;
+}
+
+p .orange, p .blue, p .green {
+    -webkit-text-stroke: 0.2px black; 
+}
+
+.main-area{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.weapons-area{
+    /* background-image: url(/rock-paper-scissors-project/images/background.jpg); */
+    background-position:top;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: 5px solid;
+    border-radius: 10px;
+    min-height:150px;
+}
+
+button{
+    display:inline-block;
+    margin:0;
+    font-size: 100%;
+    transition:.2s;
+    background-color: transparent;
+    border:  none;
+}
+
+button.weapon {
+    margin: 10px 0;
+    transition: all .2s;
+    filter: grayscale(100%);
+}
+
+
+button:hover{
+    transform: scale(1.2);
+    filter: none;
+}
+
+.gameinfo {
+    display: flex;
+    justify-content: space-evenly;
+    border: 5px solid black;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.computer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    font-size: 20px;
+    border-right: 5px solid black;   
+}
+
+.roundinfo {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    font-size: 20px;
+    padding: 10px;;
+}
+.roundinfo p {
+    margin: 8px 0;  
+}
+
+.you{
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.champion{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.lifeicon {
+    width: 30px;
+    height: 30px;  
+}
+
+.message {
+    font-size: 15px;;
+}
+
+footer{
+    font-family: 'VT323';
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    border-top: 5px solid black;
+    text-align: center;
+}
+
+
