@@ -1,42 +1,51 @@
 *{margin-left:0;} 
 
 main{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     font-family: 'VT323';
     max-width: 720px;
     margin: auto;
-
+    margin-bottom: 100px;
 }
 
 .blue {
-    color: #53bccc;
-      
+    color: #53bccc;   
 }
 
 .green{
     color: rgba(67, 179, 32, 0.897);
-   
 }   
 
 .orange {
-    color: rgb(248, 167, 16); 
-    
+    color: rgb(248, 167, 16);  
 }
 
-#header {
+header {
     display: flex;
     flex-direction: column;
     text-align: center;
+    font-family: 'VT323';
+    max-width: 720px;
+    margin: auto;
 }
 
 h1{
-    font-size: 60px;
+    font-size: 80px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
 h1 .title {
     -webkit-text-stroke: 1px black; 
     margin-bottom: -30px; 
+}
+.title-icon {
+    width: 70px;
+    height: 70px;  
 }
 
 .icons {
@@ -57,17 +66,86 @@ p .orange, p .blue, p .green {
     -webkit-text-stroke: 0.2px black; 
 }
 
-.main-area{
+main{
     display: flex;
     flex-direction: column;
     text-align: center;
     margin-bottom: 100px;
 }
 
-.weapons-area{
-    /* background-image: url(/rock-paper-scissors-project/images/background.jpg); */
-    background-position:top;
-    background-size: cover;
+
+.gameinfo {
+    display: flex;
+    justify-content: space-evenly;
+    border: 5px solid black;
+    border-radius: 10px;
+    
+}
+
+.computer{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    font-size: 20px;
+    border-left: 5px solid black;
+    padding-bottom: 10px; 
+    
+}
+
+
+.roundinfo {
+    display: flex;
+    flex-direction: column;
+    width: 15em;
+    margin: auto;
+    flex-grow: 2;
+    font-size: 25px;
+}
+
+.roundinfo p {
+    margin-top: 0;
+    align-self: center;
+}
+
+#player-name, #computer-name {
+    margin-bottom: 0;
+}
+
+.player-health{
+    display:flex;
+    align-self: center;
+    flex-wrap: wrap;
+    width: 64%;
+    padding-left: 4%;
+    min-width: fit-content;
+    column-gap: 10px;  
+}
+
+.computer-health{
+    display: flex;
+    align-self: center;
+    flex-wrap: wrap;
+    width: 68%;
+    min-width: fit-content;
+    column-gap: 10px;   
+}
+
+
+.lifeicon {
+    width: 40px;
+    height: 40px;  
+}
+
+.computer-icon{
+    margin: 0 5px;
+}
+
+.message {
+    font-size: 20px;
+}
+
+/* player element choices styling */
+.element-area{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -85,65 +163,69 @@ button{
     border:  none;
 }
 
-button.weapon {
+button.element {
     margin: 10px 0;
-    transition: all .2s;
+    transition: all 200ms;
     filter: grayscale(100%);
 }
 
 
-button:hover{
+button.element:hover{
     transform: scale(1.2);
     filter: none;
 }
 
-.gameinfo {
-    display: flex;
-    justify-content: space-evenly;
-    border: 5px solid black;
-    border-radius: 10px;
-    margin-top: 30px;
+button.element.highlight{
+    filter: none;
 }
 
-.computer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 1;
-    font-size: 20px;
-    border-right: 5px solid black;   
-}
 
-.roundinfo {
+/* end of game elements */
+.endgame {
+    font-size: 25px;
     display: flex;
     flex-direction: column;
-    flex-grow: 2;
-    font-size: 20px;
-    padding: 10px;;
-}
-.roundinfo p {
-    margin: 8px 0;  
+    align-self: center;
+    visibility: hidden;
+    height: 0;
+    width: 500px;
 }
 
-.you{
-    display:flex;
-    align-items: center;
-    justify-content: space-evenly;
+.thankyou{
+    align-self: center;
 }
 
-.champion{
+.status{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-evenly;
 }
 
-.lifeicon {
-    width: 30px;
-    height: 30px;  
+.status-icon{
+    align-self: center;
+    width: 100px;
+    height: auto;
 }
 
-.message {
-    font-size: 15px;;
+.status-message{
+    width:auto;
+}
+
+.play-again{
+    transition: 2s;
+    font-family: 'VT323';
+    font-size: 25px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: auto;
+    transition: 200ms;
+}
+
+.playEnable:hover{
+    transform: scale(1.1);
+    background-color: #fff;
+    box-shadow:
+      0 0 10px 5px gray; ;/* outer cyan */
 }
 
 footer{
@@ -155,6 +237,53 @@ footer{
     background-color: white;
     border-top: 5px solid black;
     text-align: center;
+}
+
+
+
+/* fade in and typing animations  */
+.statusTyped {
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: .1em;
+    animation: typing2 1.5s steps(30, end), forwards;
+}
+
+
+.thanksTyped{
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: .1em;
+    animation: typing1 6s steps(60, start), forwards;
+}
+
+.appearIcon{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: fadein 4s steps(30, end), forwards;
+}
+
+.appearPlayAgain {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: fadein 8.5s steps(40, end), forwards;
+}
+
+@keyframes typing1 {
+    0% { width: 0%;}
+    50% { width: 0%;}
+    100% {width: 100%;}
+}
+
+@keyframes typing2 {
+    from { width: 0; }
+    to { width: 100%;}
+}
+
+@keyframes fadein {
+    0% { opacity: 0;}
+    50% { opacity: 0;}
+    100% {opacity: 1;}
 }
 
 
