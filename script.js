@@ -55,7 +55,7 @@ function tie(choice, msg){
     rounds.innerText = `Round: ${++round}`; 
 }
 
-function playRound(p,c){ //given inputs player and comp, find winner & display msg & icon
+function playRound(p,c){ //given inputs player and comp, call win, lose or tie function
     if(p == 'fire'){ 
         if(c== 'grass') win('grass', msg.fireWin)
         else if(c== 'water') lose('water', msg.fireLose) 
@@ -64,7 +64,7 @@ function playRound(p,c){ //given inputs player and comp, find winner & display m
     if(p == 'water') { 
         if(c== 'fire') win('fire', msg.waterWin)
         else if(c== 'grass') lose('grass', msg.waterLose) 
-        else tie('water', msg.fireTie)
+        else tie('water', msg.waterTie)
     }
     if(p == 'grass'){
         if(c== 'water') win( 'water', msg.grassWin);  
@@ -78,20 +78,14 @@ function end(){ //end game status display
         document.querySelector('.element-area').remove();
         setTimeout(()=> {
             endDisplay('WINNER!', 'green', 'win', 'Play Again?');
-         }, 1000);
-         setTimeout(()=> {
-            playAgain.classList.add('playEnable'); //enable hover effect on button
-        }, 7000);
+         }, 1500);
     }
 
     if(playerHearts.childElementCount == 0){ //end game message if you lose
         document.querySelector('.element-area').remove();
         setTimeout(()=> {
             endDisplay('LOSER! ', 'red', 'lose', 'Try Again?');
-        }, 1000);
-        setTimeout(()=> {
-            playAgain.classList.add('playEnable');
-        }, 7000);
+        }, 1500); 
     }
 }
 
@@ -103,7 +97,7 @@ function endDisplay(text, color, img, buttonText){ //changes end status based on
     document.querySelector('.status-message').classList.add('statusTyped');//winner or loser status
     statusIcon.src = `images/${img}.png`; //ghost or trophy img
     document.querySelector('.status-icon').classList.add('appearIcon'); //animation for fadein
-    playAgain.innerText = buttonText; //change button text to 'Play Again' or 'Try Again'
+    playAgain.innerText = buttonText; //set button text to 'Play Again' or 'Try Again'
     document.querySelector('.play-again').classList.add('appearPlayAgain'); //animation fade in
     document.querySelector('.thankyou').classList.add('thanksTyped'); //animation for thank you message
 

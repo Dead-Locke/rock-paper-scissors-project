@@ -66,18 +66,11 @@ p .orange, p .blue, p .green {
     -webkit-text-stroke: 0.2px black; 
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-bottom: 100px;
-}
-
-
+/*  main game info, rounds, lives, opponent choice etc. ----------------------- */
 .gameinfo {
     display: flex;
     justify-content: space-evenly;
-    border: 5px solid black;
+    border: 4px solid black;
     border-radius: 10px;
     
 }
@@ -87,7 +80,7 @@ main{
     flex-direction: column;
     flex-grow: 1;
     font-size: 20px;
-    border-left: 5px solid black;
+    border-left: 4px solid black;
     padding-bottom: 10px; 
     
 }
@@ -144,12 +137,12 @@ main{
     font-size: 20px;
 }
 
-/* player element choices styling */
+/* player element choices styling-------------------------------------------------*/
 .element-area{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    border: 5px solid;
+    border:4px solid black;
     border-radius: 10px;
     min-height:150px;
 }
@@ -166,7 +159,7 @@ button{
 button.element {
     margin: 10px 0;
     transition: all 200ms;
-    filter: grayscale(100%);
+    filter: grayscale(95%);
 }
 
 
@@ -180,7 +173,7 @@ button.element.highlight{
 }
 
 
-/* end of game elements */
+/* end of game elements ----------------------------------------------------------*/
 .endgame {
     font-size: 25px;
     display: flex;
@@ -209,6 +202,7 @@ button.element.highlight{
 
 .status-message{
     width:auto;
+    font-size: 35px;
 }
 
 .play-again{
@@ -221,16 +215,22 @@ button.element.highlight{
     transition: 200ms;
 }
 
-.playEnable:hover{
+.play-again:hover{
     transform: scale(1.1);
     background-color: #fff;
     box-shadow:
       0 0 10px 5px gray; ;/* outer cyan */
 }
 
+
+/* Copyright footer and links ---------------------------------------------------*/
 footer{
     font-family: 'VT323';
     position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
     bottom: 0;
     height: 50px;
     width: 100%;
@@ -239,16 +239,20 @@ footer{
     text-align: center;
 }
 
+.link-icon{
+    width: 20px;
+    height: 20px;
+}
 
 
-/* fade in and typing animations  */
+
+/* fade in and typing animations -------------------------------------------- */
 .statusTyped {
     overflow: hidden;
     white-space: nowrap;
     letter-spacing: .1em;
-    animation: typing2 1.5s steps(30, end), forwards;
+    animation: typing2 1s steps(60, end), forwards;
 }
-
 
 .thanksTyped{
     overflow: hidden;
@@ -266,7 +270,7 @@ footer{
 .appearPlayAgain {
     overflow: hidden;
     white-space: nowrap;
-    animation: fadein 8.5s steps(40, end), forwards;
+    animation: fadein 8.5s steps(30, end), forwards;
 }
 
 @keyframes typing1 {
@@ -285,5 +289,4 @@ footer{
     50% { opacity: 0;}
     100% {opacity: 1;}
 }
-
 
