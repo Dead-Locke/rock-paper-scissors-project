@@ -3,11 +3,13 @@
 ## First major project from [The Odin Project](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/revisiting-rock-paper-scissors) curriculum. 
 This is a variation of the classic game, with the same basic premise. The theme is that of the three elements; fire, water and grass. You play against a computer with both of you having 6 lives. A tie does not deduct lives. 
 
+### [Play the game](https://dead-locke.github.io/rock-paper-scissors-project/) in your browser.
+
 ## The game:
- - displays player's and computer's choices 
- - tracks the lives of each player  
- - displays a custom message for every combination of two elements 
- - displays a different animated end game message depending on the victory status.
+ - display player's and computer's choices 
+ - track the lives of each player  
+ - display a custom message for every combination of two elements 
+ - display a different animated end game message depending on the victory status.
 
 --------------------
 
