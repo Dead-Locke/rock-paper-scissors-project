@@ -3,7 +3,7 @@ const elements = document.querySelectorAll('.element');
 const rounds = document.querySelector('.round');
 const message = document.querySelector('.message');
 const computerImage = document.querySelector('.computer-image');
-const playerHearts = document.querySelector('#pHearts')
+const playerHearts = document.getElementById('pHearts')
 const computerHearts = document.getElementById('cHearts');
 const statusMessage = document.querySelector('.status-message');
 const statusIcon = document.querySelector('.status-icon');
@@ -31,7 +31,7 @@ function randomIntInterval(min, max){ // returns random integer in a range
     return Math.floor(Math.random()*(max-min+1) + min)
 }
 
-//the following 3 functions receive the computer move and a win/lose/tie  message, display both, then increment the hearts/lives and rounds
+//the following 3 functions receive the computer move and a win/lose/tie message, display both, then increment the hearts/lives and rounds accordingly
 function win(computer, msg){ 
     computerHearts.removeChild(computerHearts.lastChild);
     message.innerText = msg;
@@ -103,7 +103,7 @@ function endDisplay(text, color, img, buttonText){ //changes end status based on
 
 }
 
-function play() { //listen for button clicks and play round each click
+function play() { //listen for button clicks and play a round each click
     elements.forEach(elem => {
         elem.addEventListener('click', () => {
             elements.forEach(x => x.classList.remove('highlight')); //remove highlight
@@ -113,11 +113,10 @@ function play() { //listen for button clicks and play round each click
             if(elem.classList.contains('water')) p = 'water';
             if(elem.classList.contains('grass')) p = 'grass'; 
 
-            elem.className += ' highlight'; //player choice highlighted
+            elem.className += ' highlight'; //player choice stays highlighted
 
             playRound(p,c); //play a round and adjust score, display all appropriate info
             end(); // check for end of game and display play again message
-
         });
     });
 
